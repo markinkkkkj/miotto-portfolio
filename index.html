@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marcos Miotto — Desenvolvedor Cloud & Fullstack</title>
+    <meta
+      name="description"
+      content="Portfólio de Marcos Miotto: desenvolvedor cloud (AWS e Google Cloud) que constrói produtos completos — da infraestrutura ao app na mão do usuário."
+    >
+    <meta name="theme-color" content="#0e1210">
+
+    <!-- Open Graph: preview do link em redes sociais -->
+    <meta property="og:title" content="Marcos Miotto — Desenvolvedor Cloud & Fullstack">
+    <meta property="og:description" content="Da infraestrutura AWS/GCP ao app na mão do usuário.">
+    <meta property="og:url" content="https://marcos.miotto.dev">
+    <meta property="og:type" content="website">
+
+    <!-- Tipografia: Inter (leitura) + JetBrains Mono (labels/código) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- Acessibilidade: pular direto para o conteúdo -->
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="#">marcos<span>.miotto.dev</span></a>
+        <nav class="site-nav" aria-label="Navegação principal">
+          <ul>
+            <li><a href="#projetos">projetos</a></li>
+            <li><a href="#stack">stack</a></li>
+            <li><a href="#sobre">sobre</a></li>
+            <li><a href="#contato">contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <!-- ===== Hero ===== -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container">
+          <p class="hero-prompt">
+            <span class="prompt-symbol">$</span> whoami<span class="cursor" aria-hidden="true"></span>
+          </p>
+          <h1 id="hero-title">Marcos Miotto</h1>
+          <p class="hero-positioning">
+            Desenvolvedor cloud — <strong>AWS &amp; Google Cloud</strong>. Construo produtos
+            completos: <strong>da infraestrutura ao app na mão do usuário</strong>, passando por
+            backend serverless, web e mobile.
+          </p>
+          <ul class="hero-tags" aria-label="Áreas de atuação">
+            <li>aws</li>
+            <li>google cloud</li>
+            <li>serverless</li>
+            <li>fullstack</li>
+            <li>mobile</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#projetos">Ver projetos</a>
+            <a class="btn btn--ghost" href="#contato">Falar comigo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Projetos ===== -->
+      <section id="projetos" aria-labelledby="projetos-title">
+        <div class="container">
+          <p class="section-label">01. projetos</p>
+          <h2 class="section-title" id="projetos-title">Projetos em destaque</h2>
+
+          <!-- Cards gerados por js/main.js a partir de js/projects.js -->
+          <div class="projects-grid" id="featured-projects"></div>
+
+          <h3 class="subsection-title">// outros projetos</h3>
+          <div class="projects-grid projects-grid--compact" id="other-projects"></div>
+
+          <noscript>
+            <p>
+              Este site usa JavaScript para listar os projetos. Sem ele, você pode ver tudo
+              direto no <a href="https://github.com/markinkkkkj" rel="noopener">meu GitHub</a>.
+            </p>
+          </noscript>
+        </div>
+      </section>
+
+      <!-- ===== Stack ===== -->
+      <section id="stack" aria-labelledby="stack-title">
+        <div class="container">
+          <p class="section-label">02. stack</p>
+          <h2 class="section-title" id="stack-title">Stack técnico</h2>
+
+          <div class="stack-grid">
+            <div class="stack-category">
+              <h3>Cloud</h3>
+              <ul>
+                <li class="pill">AWS Secrets Manager</li>
+                <li class="pill">AWS SES</li>
+                <li class="pill">Firebase Auth</li>
+                <li class="pill">Firestore</li>
+                <li class="pill">Cloud Storage</li>
+                <li class="pill">GitHub Pages</li>
+              </ul>
+            </div>
+
+            <div class="stack-category">
+              <h3>Backend</h3>
+              <ul>
+                <li class="pill">Node.js</li>
+                <li class="pill">NestJS</li>
+                <li class="pill">TypeScript</li>
+                <li class="pill">Python</li>
+                <li class="pill">MongoDB</li>
+                <li class="pill">Redis</li>
+                <li class="pill">REST</li>
+                <li class="pill">SSE</li>
+              </ul>
+            </div>
+
+            <div class="stack-category">
+              <h3>Frontend</h3>
+              <ul>
+                <li class="pill">React</li>
+                <li class="pill">JavaScript</li>
+                <li class="pill">HTML</li>
+                <li class="pill">CSS</li>
+              </ul>
+            </div>
+
+            <div class="stack-category">
+              <h3>Mobile</h3>
+              <ul>
+                <li class="pill">Flutter</li>
+                <li class="pill">Dart</li>
+                <li class="pill">Android (Kotlin)</li>
+                <li class="pill">NFC</li>
+                <li class="pill">Google Maps</li>
+              </ul>
+            </div>
+
+            <div class="stack-category">
+              <h3>DevOps &amp; Automação</h3>
+              <ul>
+                <li class="pill">Docker</li>
+                <li class="pill">Docker Compose</li>
+                <li class="pill">Linux (Arch)</li>
+                <li class="pill">Shell / Bash</li>
+                <li class="pill">systemd</li>
+                <li class="pill">Git &amp; GitHub</li>
+              </ul>
+            </div>
+
+            <div class="stack-category">
+              <h3>IA aplicada</h3>
+              <ul>
+                <li class="pill">Claude API</li>
+                <li class="pill">Vercel AI SDK</li>
+                <li class="pill">CrewAI</li>
+                <li class="pill">Aider</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Sobre ===== -->
+      <section id="sobre" aria-labelledby="sobre-title">
+        <div class="container">
+          <p class="section-label">03. sobre</p>
+          <h2 class="section-title" id="sobre-title">Sobre mim</h2>
+
+          <!-- Ajuste a narrativa como preferir — o texto abaixo segue a
+               trajetória fullstack → mobile → cloud. -->
+          <p class="about-text">
+            Comecei no desenvolvimento <strong>fullstack</strong>, construindo web apps de ponta a
+            ponta. Passei pelo <strong>mobile</strong> — Android nativo em Kotlin e Flutter — e
+            hoje meu foco é <strong>cloud</strong>: desenhar a infraestrutura na AWS e no Google
+            Cloud e levar o produto até a mão do usuário.
+          </p>
+          <p class="about-text">
+            Formação em Engenharia de Software pela <strong>PUC-Campinas</strong>. O que me move é
+            o produto completo: o mesmo projeto em que configuro o Secrets Manager é o projeto em
+            que penso o fluxo de quem usa a tela.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== Contato ===== -->
+      <section id="contato" aria-labelledby="contato-title">
+        <div class="container">
+          <p class="section-label">04. contato</p>
+          <h2 class="section-title" id="contato-title">Contato</h2>
+          <p class="contact-intro">
+            Sem formulário: me chama direto por qualquer um destes canais.
+          </p>
+
+          <ul class="contact-links">
+            <li>
+              <a href="mailto:marcos@miotto.dev">
+                <span class="contact-kind">email</span> marcos@miotto.dev
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/markinkkkkj" target="_blank" rel="noopener">
+                <span class="contact-kind">github</span> github.com/markinkkkkj
+              </a>
+            </li>
+            <li>
+              <!-- TODO: troque SEU-USUARIO pelo seu usuário real do LinkedIn -->
+              <a href="https://www.linkedin.com/in/SEU-USUARIO" target="_blank" rel="noopener">
+                <span class="contact-kind">linkedin</span> linkedin.com/in/SEU-USUARIO
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Marcos Miotto · feito à mão com HTML, CSS e JS · marcos.miotto.dev</p>
+      </div>
+    </footer>
+
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
