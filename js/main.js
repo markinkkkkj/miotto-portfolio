@@ -61,18 +61,30 @@ function featuredCard(project) {
   card.appendChild(header);
 
   card.appendChild(labeledBlock("problema", project.problem));
-  if (project.architecture) card.appendChild(labeledBlock("arquitetura", project.architecture));
-  if (project.challenge) card.appendChild(labeledBlock("desafio", project.challenge));
 
-  // Diagrama de arquitetura (apenas projetos cloud-heavy têm um).
-  if (project.diagram) {
-    const figure = el("figure", "project-diagram");
-    const img = document.createElement("img");
-    img.src = project.diagram;
-    img.alt = project.diagramAlt || `Diagrama de arquitetura de ${project.name}`;
-    img.loading = "lazy";
-    figure.appendChild(img);
-    card.appendChild(figure);
+  // Arquitetura, desafio e diagrama ficam num <details> colapsável: fechado
+  // no celular (o card não vira um paredão de texto) e aberto no desktop.
+  const hasDetails = project.architecture || project.challenge || project.diagram;
+  if (hasDetails) {
+    const details = el("details", "project-more");
+    details.appendChild(el("summary", "project-more-summary", "detalhes técnicos"));
+
+    if (project.architecture) details.appendChild(labeledBlock("arquitetura", project.architecture));
+    if (project.challenge) details.appendChild(labeledBlock("desafio", project.challenge));
+
+    // Diagrama de arquitetura (apenas projetos cloud-heavy têm um).
+    if (project.diagram) {
+      const figure = el("figure", "project-diagram");
+      const img = document.createElement("img");
+      img.src = project.diagram;
+      img.alt = project.diagramAlt || `Diagrama de arquitetura de ${project.name}`;
+      img.loading = "lazy";
+      figure.appendChild(img);
+      details.appendChild(figure);
+    }
+
+    details.open = window.matchMedia("(min-width: 640px)").matches;
+    card.appendChild(details);
   }
 
   card.appendChild(stackList(project.stack));

@@ -26,6 +26,7 @@
   --surface-2: #1a221d;   /* hover / blocos internos */
   --border: #26302a;      /* bordas visíveis, baixa ênfase */
   --text: #e8ede9;        /* texto principal */
+  --text-soft: #c9d2cb;   /* parágrafos longos — mais contraste que --muted */
   --muted: #9aa69d;       /* texto secundário */
   --accent: #c6ff3d;      /* verde-lima — links, labels, foco */
   --accent-soft: rgba(198, 255, 61, 0.12);
@@ -394,8 +395,44 @@ section {
 }
 
 .project-block-text {
+  color: var(--text-soft); /* leitura longa pede mais contraste que --muted */
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+/* Detalhes técnicos (arquitetura, desafio, diagrama) — colapsáveis.
+   O js/main.js abre por padrão no desktop e deixa fechado no celular. */
+.project-more {
+  margin-bottom: 1.1rem;
+}
+
+.project-more-summary {
+  list-style: none; /* remove o marcador nativo (o ::before abaixo assume) */
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  padding-block: 0.5rem; /* alvo de toque confortável */
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.project-more-summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-more-summary::before {
+  content: "[+] ";
   color: var(--muted);
-  font-size: 0.95rem;
+}
+
+.project-more[open] > .project-more-summary::before {
+  content: "[−] ";
+}
+
+.project-more[open] > .project-more-summary {
+  margin-bottom: 0.5rem;
 }
 
 .project-diagram {
