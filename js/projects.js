@@ -46,6 +46,24 @@ const FEATURED_PROJECTS = [
     },
   },
   {
+    name: "The Fellows Run",
+    tagline: "App multiplataforma para organizar corridas em grupo",
+    problem:
+      "Grupos de corrida organizam eventos por planilha e mensagens soltas. O app centraliza " +
+      "a criação de corridas, inscrições, metas e estatísticas dos participantes.",
+    stack: ["Flutter", "Dart", "Firebase Auth", "Firestore", "Storage"],
+    architecture:
+      "Flutter multiplataforma com camadas bem separadas — models, repositories e UI. " +
+      "Firestore como fonte de dados em tempo real, Firebase Auth para identidade e " +
+      "Storage para fotos de perfil capturadas na hora com a câmera.",
+    challenge:
+      "Manter a UI reativa sem estourar o custo de leituras do Firestore: repositórios com " +
+      "cache local de usuários e widgets enxutos, isolados por tela.",
+    links: {
+      repo: "https://github.com/markinkkkkj/the-fellows-run",
+    },
+  },
+  {
     name: "Smart Locker",
     tagline: "Locação de armários inteligentes com destravamento por NFC e QR Code",
     problem:
@@ -64,25 +82,7 @@ const FEATURED_PROJECTS = [
     links: {
       repo: "https://github.com/PI3-T7/PI3-ES-2024-T7",
     },
-  },
-  {
-    name: "The Fellows Run",
-    tagline: "App multiplataforma para organizar corridas em grupo",
-    problem:
-      "Grupos de corrida organizam eventos por planilha e mensagens soltas. O app centraliza " +
-      "a criação de corridas, inscrições, metas e estatísticas dos participantes.",
-    stack: ["Flutter", "Dart", "Firebase Auth", "Firestore", "Storage"],
-    architecture:
-      "Flutter multiplataforma com camadas bem separadas — models, repositories e UI. " +
-      "Firestore como fonte de dados em tempo real, Firebase Auth para identidade e " +
-      "Storage para fotos de perfil capturadas na hora com a câmera.",
-    challenge:
-      "Manter a UI reativa sem estourar o custo de leituras do Firestore: repositórios com " +
-      "cache local de usuários e widgets enxutos, isolados por tela.",
-    links: {
-      repo: "https://github.com/markinkkkkj/the-fellows-run",
-    },
-  },
+  }
 ];
 
 // Outros projetos: cards compactos, só descrição + stack + links.
